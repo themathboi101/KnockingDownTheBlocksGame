@@ -15,7 +15,16 @@ class Block{
       var pos= this.body.position;
       rectMode(CENTER);
       if(this.speed<3){
+        var angle= this.body.angle;
+         
+        var pos=this.body.position;
+        translate(pos.x,pos.y);
+        var angle=this.body.angle;
+        rotate(angle);
+        rectMode(CENTER);
+        
         rect(pos.x,pos.y,this.width, this.height);
+        image(this.image,pos.x,pos.y,this.width,this.height);
       }
       else{
         push();
